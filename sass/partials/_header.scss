@@ -1,0 +1,26 @@
+header, .current, footer {
+  padding: 350px 30%;
+  text-align: center;
+
+  @include respond-to(handhelds) {
+    padding: 150px 10%;
+  }
+  @include respond-to(medium-screens) {
+    padding: 150px 25%;
+  }
+  @include respond-to(wide-screens) {
+
+  }
+}
+
+header {
+  @include gradient(#e65142, #fe0d3a, #fc0130);
+}
+
+header hr {
+  width: 30%;
+  background: rgba(255,255,255,0.2);
+  border: 0;
+  height: 4px;
+  margin: 55px auto;
+}

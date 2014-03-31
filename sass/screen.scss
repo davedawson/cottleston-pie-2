@@ -1,0 +1,25 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+// http://anthonyshort.me/2012/03/scss-coding-style
+// http://compass-style.org/help/tutorials/spriting/
+// http://sass-lang.com/tutorial.html
+// Typekit: "ff-tisa-sans-web-pro"  "ff-tisa-web-pro"
+
+/* Copyright Cottleston Pie LLC - 2014 */
+
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+@import "modules/vars";
+@import "modules/mixins";
+@import "modules/utilities";
+@import "modules/type";
+@import "partials/global";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/body";

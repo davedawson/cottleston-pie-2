@@ -1,0 +1,283 @@
+
+// http://anthonyshort.me/2012/03/scss-coding-style
+// http://compass-style.org/help/tutorials/spriting/
+// http://sass-lang.com/tutorial.html
+// Typekit: "ff-tisa-sans-web-pro"  "ff-tisa-web-pro"
+
+/* Copyright Dave Dawson - 2012 */
+
+/* RESET */
+/* YUI Reset version: 2.7.0 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset,img { border: 0; }
+address,caption,cite,code,dfn,em,strong,th,var,optgroup { font-style: inherit; font-weight: inherit; }
+del,ins { text-decoration: none; }
+li { list-style: none; }
+caption, th { text-align: left; }
+h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal; }
+q:before, q:after { content: ''; }
+abbr,acronym { border: 0; font-variant: normal; }
+sup { vertical-align: baseline; }
+sub { vertical-align: baseline; }
+/*because legend doesn't inherit in IE */
+legend { color: #000; }
+input,button,textarea,select,optgroup,option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+input,button,textarea,select { *font-size: 100%; }
+
+// Import 
+
+@import url('fonts/font-face.css');
+
+// Variables
+$radius: 4px;
+
+$typeThin: "Macha-thin", Helvetica, Arial, sans-serif; 
+$typeBook: "Macha-book", Helvetica, Arial, sans-serif; 
+$typeMedium: "Macha-medium", Helvetica, Arial, sans-serif; 
+
+$break-small: 480px;
+$break-medium: 480px;
+$break-semi-large: 768px;
+$break-large: 1024px;
+
+$color-light: #e4eff0;
+$color-dark: #426c6f;
+$color-hover: #33595d;
+$color-action: #e07a2f;
+$color-text: #4c4c4c;
+
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) {@content;}
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {@content;}
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) {@content;}
+  }
+}
+
+// Mixins 
+@mixin borderRadius {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+} 
+
+@mixin textFieldClean {
+  border: 0;  
+  @include borderRadius;
+  padding: 10px
+}
+
+@mixin borderBox {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+@mixin gradient($first, $second, $third) {
+  background: $second;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second');
+  background: -webkit-gradient(linear, left top, left bottom, from($first), to($second), color-stop(.5,$third));
+//  background-image:-webkit-linear-gradient(top, $first 10%, $second 49%, $third 100%);
+  background: -moz-linear-gradient(top,  $first,  $second, $third);
+}
+
+html, body, * {
+    text-rendering: optimizeLegibility; 
+    -webkit-font-smoothing: antialiased; 
+}
+
+
+
+.wrap {  margin: 0 auto; }
+
+ * { transition: all 0.25s linear; -moz-transition: all 0.25s linear; -webkit-transition: all 0.25s linear; -o-transition: all 0.25s linear; }
+
+// Body Styles
+body {
+  font-family: Macha-book;
+}
+
+.wrap {  margin: 0 auto; max-width: 600px; }
+
+
+// Type Styles
+h1 { 
+  font: 48px $typeThin;
+  color: #fff;
+
+}
+h2 { 
+  font: 18px $typeMedium;
+  text-transform: uppercase; 
+  letter-spacing: 0.3em;
+  color: #fff; 
+  margin-bottom: 50px;
+}
+h2.tagline { 
+  margin-bottom: 0; 
+}
+h2.location { 
+  margin-top: 10px; 
+  letter-spacing: 0.8em; 
+  font-size: 16px; 
+  color: rgba(255,255,255,0.5);
+}
+h3 { 
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 15px; 
+}
+h4 { }
+p { 
+  color: #fff;
+}
+a { 
+  color: #fff; 
+  text-decoration: none; 
+  padding-bottom: 2px; 
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+a:hover { 
+  border-bottom: 2px solid rgba(255,255,255,0.6);
+}
+ul, ol { margin: 0.6em 0; padding: 0; font: 1.4rem ; line-height: 1.4em; }
+ul li, ol li { 
+  list-style-type: disc; 
+  margin: 15px 0 15px;
+  color: #fff;
+  font-size: 18px;
+  @include respond-to(handhelds) {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(wide-screens) {  }
+} 
+
+blockquote { font: normal 1.3em/1.3em $typeBook;  color: #666; margin: 1em;  }
+
+// Header 
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+// Clearfix
+.cf:before, .cf:after {content:" "; display:table;}
+.cf:after {clear: both;}
+  //IE
+  .cf {*zoom: 1;}
+
+
+// Misc 
+
+.hide { display: none; }
+
+header, .current, footer { 
+  padding: 350px 30%;  
+  text-align: center;
+
+  @include respond-to(handhelds) {
+    padding: 150px 10%;  
+  }
+  @include respond-to(medium-screens) {
+    padding: 150px 25%;  
+  }
+  @include respond-to(wide-screens) {
+
+  }
+}
+
+header { 
+  @include gradient(#e65142, #fe0d3a, #fc0130);
+}
+
+header hr {
+  width: 30%;
+  background: rgba(255,255,255,0.2);
+  border: 0;
+  height: 4px; 
+  margin: 55px auto;
+}
+
+.intro { 
+  background: #f91c11;
+  padding: 50px;
+}
+
+.intro p {
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+}
+.intro p:first-child {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.intro .wrap { 
+  max-width: 860px;
+}
+.current { 
+  @include gradient(#215778, #29284b, #444377);
+  border-left: 0;
+  border-right: 0;
+}
+
+.current li:first-child {
+  border-top: 4px solid rgba(255,255,255,0.2);
+  padding-top: 50px;
+}
+.current li { 
+  font-size: 22px;
+  list-style-type: none;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 4px solid rgba(255,255,255,0.2);
+}
+.current li ul {
+  margin: 0;
+}
+.current li ul li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+.current li ul li {  
+  font-size: 16px;
+  margin: 0 0;
+  padding: 0;
+  border: 0;
+}
+
+footer {
+  background: #1d1f2e;
+}
+
+
+
+/* UTILITIES */
+
+// Clearfix
+.cf:before, .cf:after {content:" "; display:table;}
+.cf:after {clear: both;}
+  //IE
+  .cf {*zoom: 1;}

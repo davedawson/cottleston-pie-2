@@ -1,0 +1,1 @@
+cd /srv/www/www.havesomecottlestonpie.com/html && /usr/lib/git-core/git pull && cd -

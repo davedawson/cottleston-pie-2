@@ -1,0 +1,46 @@
+@mixin respond-to($media) {
+  @if $media == small {
+    @media only screen and (max-width: $break-small) {@content;}
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {@content;}
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) {@content;}
+  }
+}
+
+// Mixins
+@mixin borderRadius {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin textFieldClean {
+  border: 0;
+  @include borderRadius;
+  padding: 10px
+}
+
+@mixin borderBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin gradient($first, $second, $third) {
+  background: $second;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second');
+  background: -webkit-gradient(linear, left top, left bottom, from($first), to($second), color-stop(.5,$third));
+//  background-image:-webkit-linear-gradient(top, $first 10%, $second 49%, $third 100%);
+  background: -moz-linear-gradient(top,  $first,  $second, $third);
+}
+
+html, body, * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+

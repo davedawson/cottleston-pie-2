@@ -1,0 +1,68 @@
+.wrap {  margin: 0 auto; }
+
+ * { transition: all 0.25s linear; -moz-transition: all 0.25s linear; -webkit-transition: all 0.25s linear; -o-transition: all 0.25s linear; }
+
+// Body Styles
+body {
+  font-family: Macha-book;
+}
+
+.wrap {  margin: 0 auto; max-width: 600px; }
+
+
+// Type Styles
+h1 {
+  font: 48px $typeThin;
+  color: #fff;
+
+}
+h2 {
+  font: 18px $typeMedium;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #fff;
+  margin-bottom: 50px;
+}
+h2.tagline {
+  margin-bottom: 0;
+}
+h2.location {
+  margin-top: 10px;
+  letter-spacing: 0.8em;
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+}
+h3 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+h4 { }
+p {
+  color: #fff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+a:hover {
+  border-bottom: 2px solid rgba(255,255,255,0.6);
+}
+ul, ol { margin: 0.6em 0; padding: 0; font: 1.4rem ; line-height: 1.4em; }
+ul li, ol li {
+  list-style-type: disc;
+  margin: 15px 0 15px;
+  color: #fff;
+  font-size: 18px;
+  @include respond-to(handhelds) {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(wide-screens) {  }
+}
+
+blockquote { font: normal 1.3em/1.3em $typeBook;  color: #666; margin: 1em;  }
+
+// Header
+
