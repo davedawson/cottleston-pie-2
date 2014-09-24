@@ -1,17 +1,4 @@
-header, .current, footer {
-  padding: 350px 30%;
-  text-align: center;
 
-  @include respond-to(handhelds) {
-    padding: 150px 10%;
-  }
-  @include respond-to(medium-screens) {
-    padding: 150px 25%;
-  }
-  @include respond-to(wide-screens) {
-
-  }
-}
 
 header {
   @include gradient(#e65142, #fe0d3a, #fc0130);

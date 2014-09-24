@@ -1,11 +1,11 @@
 @charset "UTF-8";
-@import url("//hello.myfonts.net/count/25c5fc");
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* Copyright Cottleston Pie LLC - 2014 */
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+@import url("//hello.myfonts.net/count/25c5fc");
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,45 +27,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p448/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -78,18 +78,18 @@ html, body, * {
 
 /* UTILITIES */
 /* line 4, ../sass/modules/_utilities.scss */
-.cf:before, .cf:after {
+.cf:before, .cp:before, .cf:after, .cp:after {
   content: " ";
   display: table;
 }
 
 /* line 5, ../sass/modules/_utilities.scss */
-.cf:after {
+.cf:after, .cp:after {
   clear: both;
 }
 
 /* line 7, ../sass/modules/_utilities.scss */
-.cf {
+.cf, .cp {
   *zoom: 1;
 }
 
@@ -162,30 +162,28 @@ body {
 /* line 10, ../sass/partials/_global.scss */
 .wrap {
   margin: 0 auto;
-  max-width: 600px;
 }
 
-/* line 14, ../sass/partials/_global.scss */
+/* line 15, ../sass/partials/_global.scss */
 h1 {
   font: 48px "Macha-thin", Helvetica, Arial, sans-serif;
   color: #fff;
 }
 
-/* line 19, ../sass/partials/_global.scss */
+/* line 20, ../sass/partials/_global.scss */
 h2 {
   font: 18px "Macha-medium", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: #fff;
-  margin-bottom: 50px;
 }
 
-/* line 26, ../sass/partials/_global.scss */
+/* line 28, ../sass/partials/_global.scss */
 h2.tagline {
   margin-bottom: 0;
 }
 
-/* line 29, ../sass/partials/_global.scss */
+/* line 31, ../sass/partials/_global.scss */
 h2.location {
   margin-top: 10px;
   letter-spacing: 0.8em;
@@ -193,32 +191,27 @@ h2.location {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 35, ../sass/partials/_global.scss */
+/* line 37, ../sass/partials/_global.scss */
 h3 {
   font-size: 22px;
   color: #fff;
   margin-bottom: 15px;
 }
 
-/* line 41, ../sass/partials/_global.scss */
+/* line 43, ../sass/partials/_global.scss */
 p {
   color: #fff;
+  display: block;
 }
 
-/* line 44, ../sass/partials/_global.scss */
+/* line 47, ../sass/partials/_global.scss */
 a {
   color: #fff;
   text-decoration: none;
   padding-bottom: 2px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* line 51, ../sass/partials/_global.scss */
-a:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-}
-
-/* line 54, ../sass/partials/_global.scss */
+/* line 57, ../sass/partials/_global.scss */
 ul, ol {
   margin: 0.6em 0;
   padding: 0;
@@ -226,28 +219,22 @@ ul, ol {
   line-height: 1.4em;
 }
 
-/* line 55, ../sass/partials/_global.scss */
+/* line 58, ../sass/partials/_global.scss */
 ul li, ol li {
-  list-style-type: disc;
+  list-style-type: none;
   margin: 15px 0 15px;
   color: #fff;
   font-size: 18px;
 }
 
-/* line 65, ../sass/partials/_global.scss */
+/* line 68, ../sass/partials/_global.scss */
 blockquote {
   font: normal 1.3em/1.3em "Macha-book", Helvetica, Arial, sans-serif;
   color: #666;
   margin: 1em;
 }
 
-/* line 1, ../sass/partials/_header.scss */
-header, .current, footer {
-  padding: 350px 30%;
-  text-align: center;
-}
-
-/* line 16, ../sass/partials/_header.scss */
+/* line 3, ../sass/partials/_header.scss */
 header {
   background: #fe0d3a;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second');
@@ -255,7 +242,7 @@ header {
   background: -moz-linear-gradient(top, #e65142, #fe0d3a, #fc0130);
 }
 
-/* line 20, ../sass/partials/_header.scss */
+/* line 7, ../sass/partials/_header.scss */
 header hr {
   width: 30%;
   background: rgba(255, 255, 255, 0.2);
@@ -267,38 +254,106 @@ header hr {
 /* line 1, ../sass/partials/_footer.scss */
 footer {
   background: #1d1f2e;
+  margin-bottom: 150px;
+}
+/* line 4, ../sass/partials/_footer.scss */
+footer a {
+  border-bottom: 2px solid #12c3c3;
+}
+/* line 7, ../sass/partials/_footer.scss */
+footer p {
+  line-height: 19px;
 }
 
 /* line 1, ../sass/partials/_body.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, ../sass/partials/_body.scss */
+body {
+  background: #12c3c3;
+}
+
+/* line 7, ../sass/partials/_body.scss */
 html, body, header, footer, section {
-  height: 100%;
+  text-align: center;
+  display: block;
 }
 
-/* line 5, ../sass/partials/_body.scss */
+/* line 11, ../sass/partials/_body.scss */
+header, footer, section {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 40px solid #fff;
+  padding: 350px 4%;
+}
+
+/* line 18, ../sass/partials/_body.scss */
+section {
+  padding: 150px 4%;
+}
+
+/* line 21, ../sass/partials/_body.scss */
+header {
+  margin-top: 150px;
+}
+
+/* line 24, ../sass/partials/_body.scss */
+footer {
+  margin-bottom: 150px;
+}
+
+/* line 27, ../sass/partials/_body.scss */
+.description {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* line 31, ../sass/partials/_body.scss */
+h1 img {
+  opacity: 0.7;
+  width: 35px;
+  margin: 100px auto;
+}
+/* line 35, ../sass/partials/_body.scss */
+h1 img:hover {
+  opacity: 0.8;
+}
+
+/* line 39, ../sass/partials/_body.scss */
 .intro {
-  background: #f91c11;
+  background: #fff;
   padding: 50px;
+  max-width: 600px;
+  padding: 50px 4%;
+  margin: 0 auto;
+}
+/* line 45, ../sass/partials/_body.scss */
+.intro p, .intro a {
+  color: #3e3e4a;
+}
+/* line 48, ../sass/partials/_body.scss */
+.intro a {
+  border-bottom: 2px solid #12c3c3;
 }
 
-/* line 10, ../sass/partials/_body.scss */
+/* line 53, ../sass/partials/_body.scss */
 .intro p {
   font-weight: 500;
   text-align: center;
   font-size: 18px;
 }
 
-/* line 15, ../sass/partials/_body.scss */
+/* line 58, ../sass/partials/_body.scss */
 .intro p:first-child {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* line 19, ../sass/partials/_body.scss */
-.intro .wrap {
-  max-width: 860px;
-}
-
-/* line 22, ../sass/partials/_body.scss */
+/* line 65, ../sass/partials/_body.scss */
 .current {
   background: #29284b;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second');
@@ -308,70 +363,76 @@ html, body, header, footer, section {
   border-right: 0;
 }
 
-/* line 28, ../sass/partials/_body.scss */
-.current li:first-child {
+/* line 75, ../sass/partials/_body.scss */
+li:first-child {
   border-top: 4px solid rgba(255, 255, 255, 0.2);
   padding-top: 50px;
 }
 
-/* line 32, ../sass/partials/_body.scss */
-.current li {
+/* line 79, ../sass/partials/_body.scss */
+li {
   font-size: 22px;
   list-style-type: none;
   margin-bottom: 50px;
   padding-bottom: 50px;
+  padding-top: 30px;
   border-bottom: 4px solid rgba(255, 255, 255, 0.2);
 }
 
-/* line 39, ../sass/partials/_body.scss */
-.current li ul {
+/* line 87, ../sass/partials/_body.scss */
+li ul {
   margin: 0;
 }
 
-/* line 42, ../sass/partials/_body.scss */
-.current li ul li:first-child {
+/* line 90, ../sass/partials/_body.scss */
+li ul li:first-child {
   border-top: 0;
   padding-top: 0;
 }
 
-/* line 46, ../sass/partials/_body.scss */
-.current li ul li {
+/* line 94, ../sass/partials/_body.scss */
+li ul li {
   font-size: 16px;
   margin: 0 0;
   padding: 0;
   border: 0;
 }
 
-/* line 55, ../sass/partials/_body.scss */
+/* line 101, ../sass/partials/_body.scss */
 .cp {
   background: #ffc000;
-}
-/* line 57, ../sass/partials/_body.scss */
-.cp h2, .cp .section-wrap {
-  height: 100%;
-  display: table;
-}
-/* line 61, ../sass/partials/_body.scss */
-.cp h2 {
-  width: 35%;
-  float: left;
-  text-align: right;
-  padding: 4em;
-  background: rgba(255, 255, 255, 0.2);
-}
-/* line 68, ../sass/partials/_body.scss */
-.cp h2 strong, .cp ul {
-  display: table-cell;
-  vertical-align: middle;
-  position: relative;
-}
-/* line 73, ../sass/partials/_body.scss */
-.cp ul {
-  width: 60%;
-  margin-left: 4em;
+  background: #29284b;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$first', endColorstr='$second');
+  background: -webkit-gradient(linear, left top, left bottom, from(#215778), to(#29284b), color-stop(0.5, #444377));
+  background: -moz-linear-gradient(top, #215778, #29284b, #444377);
 }
 
-/* line 83, ../sass/partials/_body.scss */
+/*
+.cp {
+  background: #ffc000;
+  h2, .section-wrap {
+    height: 100%;
+    display: table
+  }
+  h2 {
+    width: 35%;
+    float: left;
+    text-align: right;
+    padding: 4em;
+    background: rgba(255,255,255,0.2);
+  }
+  h2 strong, ul {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+  }
+  ul {
+    width: 60%;
+    margin-left: 4em;
+  }
+}
+*/
+/* line 140, ../sass/partials/_body.scss */
 li span {
   display: block;
   font-weight: bold;

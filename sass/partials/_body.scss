@@ -1,10 +1,53 @@
-html, body, header, footer, section {
-  height: 100%;
+* {
+  @include box-sizing(border-box);
 }
-
+body {
+  background: #12c3c3;
+}
+html, body, header, footer, section {
+  text-align: center;
+  display: block;
+}
+header, footer, section {
+  // padding: 350px 30%;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 40px solid #fff;
+  padding: 350px 4%;
+}
+section {
+  padding: 150px 4%;
+}
+header {
+  margin-top: 150px;
+}
+footer {
+  margin-bottom: 150px;
+}
+.description {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+h1 img {
+  opacity: 0.7;
+  width: 35px;
+  margin: 100px auto;
+  &:hover {
+    opacity: 0.8;
+  }
+}
 .intro {
-  background: #f91c11;
+  background: #fff;
   padding: 50px;
+  max-width: 600px;
+  padding: 50px 4%;
+  margin: 0 auto;
+  p, a {
+    color: #3e3e4a;
+  }
+  a {
+    border-bottom: 2px solid #12c3c3;
+  }
 }
 
 .intro p {
@@ -17,41 +60,56 @@ html, body, header, footer, section {
   margin-bottom: 20px;
 }
 .intro .wrap {
-  max-width: 860px;
+  // max-width: 860px;
 }
 .current {
   @include gradient(#215778, #29284b, #444377);
   border-left: 0;
   border-right: 0;
 }
-
-.current li:first-child {
+.clients {
+  li, li a {
+    // color: #1d1d2f;
+  }
+}
+li:first-child {
   border-top: 4px solid rgba(255,255,255,0.2);
   padding-top: 50px;
 }
-.current li {
+li {
   font-size: 22px;
   list-style-type: none;
   margin-bottom: 50px;
   padding-bottom: 50px;
+  padding-top: 30px;
   border-bottom: 4px solid rgba(255,255,255,0.2);
 }
-.current li ul {
+li ul {
   margin: 0;
 }
-.current li ul li:first-child {
+li ul li:first-child {
   border-top: 0;
   padding-top: 0;
 }
-.current li ul li {
+li ul li {
   font-size: 16px;
   margin: 0 0;
   padding: 0;
   border: 0;
 }
 
-
-
+.cp {
+  background: #ffc000;
+  @extend .cf;
+  @include gradient(#215778, #29284b, #444377);
+  li {
+    // width: 50%;
+    // float: left;
+    // background: rgba(255,255,255,0.2);
+    // padding: 20px;
+  }
+}
+/*
 .cp {
   background: #ffc000;
   h2, .section-wrap {
@@ -75,10 +133,9 @@ html, body, header, footer, section {
     margin-left: 4em;
   }
 }
-
+*/
 li {
   a {
-
   }
   span {
     display: block;
