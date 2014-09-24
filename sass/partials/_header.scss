@@ -1,13 +1,49 @@
 
 
 header {
+  // @include gradient(#e65142, #fe0d3a, #fc0130);
   @include gradient(#e65142, #fe0d3a, #fc0130);
+  @include clearfix;
+  @include respond-to(handhelds) {
+    padding: 30px 5%;
+  }
+  @include respond-to(medium-and-above) {
+    height: 100%;
+  }
+  .header-wrap {
+    background: transparentize(white,0.1);
+    border: 40px solid #fff;
+    max-width: 800px;
+    @include respond-to(medium-and-above) {
+      width: 50vw;
+      height: 50vw;
+      @include center;
+    }
+    @include respond-to(medium-screens) {
+      width: 80%;
+      padding-bottom: 80%;
+      height: 0;
+    }
+    @include respond-to(handhelds) {
+      padding: 30px 5%;
+      border: 20px solid white;
+    }
+  }
+  .content-wrap {
+    @include respond-to(medium-and-above) {
+      @include center;
+    }
+    color: black;
+  }
 }
 
 header hr {
   width: 30%;
-  background: rgba(255,255,255,0.2);
+  background: transparentize(#215778, 0.8);
   border: 0;
   height: 4px;
   margin: 55px auto;
+  @include respond-to(handhelds) {
+    margin: 25px auto;
+  }
 }

@@ -1,28 +1,19 @@
 * {
   @include box-sizing(border-box);
 }
-body {
-  background: #12c3c3;
+html, body {
+  // background: #12c3c3;
+  // background: white;
+  // @include gradient(#e65142, #fe0d3a, #fc0130);
+  height: 100%;
 }
 html, body, header, footer, section {
   text-align: center;
   display: block;
 }
-header, footer, section {
+footer, section {
   // padding: 350px 30%;
-  max-width: 600px;
   margin: 0 auto;
-  border: 40px solid #fff;
-  padding: 350px 4%;
-}
-section {
-  padding: 150px 4%;
-}
-header {
-  margin-top: 150px;
-}
-footer {
-  margin-bottom: 150px;
 }
 .description {
   margin-top: 10px;
@@ -39,7 +30,7 @@ h1 img {
 .intro {
   background: #fff;
   padding: 50px;
-  max-width: 600px;
+  max-width: 800px;
   padding: 50px 4%;
   margin: 0 auto;
   p, a {
@@ -73,16 +64,64 @@ h1 img {
   }
 }
 li:first-child {
-  border-top: 4px solid rgba(255,255,255,0.2);
-  padding-top: 50px;
 }
 li {
-  font-size: 22px;
+  font-size: 17px;
   list-style-type: none;
   margin-bottom: 50px;
-  padding-bottom: 50px;
-  padding-top: 30px;
-  border-bottom: 4px solid rgba(255,255,255,0.2);
+  // padding-bottom: 50px;
+  // padding-top: 30px;
+  // border-bottom: 4px solid rgba(255,255,255,0.2);
+  border: 20px solid white;
+  // width: 20vw;
+  // height: 20vw;
+  width: 27%;
+  height: 0;
+  padding-bottom: 27%;
+  background: transparentize(white,0.1);
+  // float: left;
+  display: inline-block;
+  color: #215778;
+  position: relative;
+  margin-right: 3%;
+  word-wrap: break-word;
+  overflow: hidden;
+  @include respond-to(medium-screens) {
+    width: 45%;
+    padding-bottom: 45%;
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+    &:nth-child(3n+3) {
+      margin-right: 3%;
+    }
+  }
+  @include respond-to(wide-screens) {
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+  @include respond-to(handhelds) {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    padding: 30px 5%;
+    margin-bottom: 25px;
+  }
+  a {
+    color: #215778;
+    width: 80%;
+    @include respond-to(medium-and-above) {
+      @include center;
+    }
+  }
+  span {
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 li ul {
   margin: 0;
@@ -97,7 +136,33 @@ li ul li {
   padding: 0;
   border: 0;
 }
-
+.projects {
+  @include gradient(#215778, #29284b, #444377);
+  @include clearfix;
+  padding: 150px 5% 150px;
+  @include respond-to(handhelds) {
+    padding: 50px 5%;
+  }
+  h2 {
+    color: white;
+    margin: 0 auto;
+  }
+  hr {
+    width: 10%;
+    border: 0;
+    height: 10px;
+    opacity: 0.2;
+    background: white;
+    margin-bottom: 50px;
+  }
+  ul {
+    margin-top: 50px;
+  }
+}
+.wrap {
+  max-width: 1270px;
+  @include clearfix;
+}
 .cp {
   background: #ffc000;
   @extend .cf;
@@ -141,4 +206,20 @@ li {
     display: block;
     font-weight: bold;
   }
+}
+
+.intro {
+  padding: 75px 5%;
+  @include respond-to(handhelds) {
+    padding: 50px 5%;
+  }
+  h3 {
+    color: #215778;
+    margin-top: 50px;
+  }
+}
+
+
+footer {
+  padding: 50px 5%;
 }
