@@ -30,8 +30,8 @@ h1 img {
 .intro {
   background: #fff;
   padding: 50px;
-  max-width: 800px;
-  padding: 50px 4%;
+  max-width: 1000px;
+  padding: 50px 2%;
   margin: 0 auto;
   p, a {
     color: #3e3e4a;
@@ -40,18 +40,54 @@ h1 img {
     border-bottom: 2px solid #12c3c3;
   }
 }
-
+.intro {
+  .col1 {
+    float: left;
+    width: 62%;
+    margin-right: 3%;
+    padding-right: 3%;
+    // border-right: 2px solid rgba(1,0,0,0.1);
+    @include respond-to(handhelds) {
+      width: 100%;
+      float: none;
+      margin-right: 0;
+    }
+  }
+  .col2 {
+    float: left;
+    width: 30%;
+    // padding-left: 3%;
+    @include respond-to(handhelds) {
+      width: 100%;
+      float: none;
+    }
+  }
+}
 .intro p {
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
+  @include respond-to(handhelds) {
+    text-align: center;
+  }
 }
 .intro p:first-child {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: 25px;
+  // margin-bottom: 20px;
+  line-height: 29px;
 }
 .intro .wrap {
   // max-width: 860px;
+}
+.intro .dd {
+  font-style: italic;
+  font-size: 14px;
+  opacity: 0.6;
+  clear: both;
+  text-align: center;
+  margin-top: 35px;
+  float: left;
+  width: 100%;
 }
 .current {
   @include gradient(#215778, #29284b, #444377);
@@ -209,17 +245,100 @@ li {
 }
 
 .intro {
-  padding: 75px 5%;
+  padding: 75px 0%;
   @include respond-to(handhelds) {
     padding: 50px 5%;
   }
   h3 {
     color: #215778;
-    margin-top: 50px;
+    text-align: left;
+    @include respond-to(handhelds) {
+      text-align: center;
+      margin-top: 30px;
+    }
+    // margin-top: 50px;
   }
 }
 
 
 footer {
   padding: 50px 5%;
+}
+
+.ks {
+  background-color: #2bde73;
+  color: white;
+  padding: 100px 5%;
+  .description {
+    width: 65%;
+    float: left;
+    @include respond-to(handhelds) {
+      width: 100%;
+      float: none;
+    }
+    @include respond-to(medium-screens) {
+      width: 100%;
+      float: none;
+    }
+  }
+  h1 {
+    color: white;
+    text-align: left;
+    font-size: 64px;
+    line-height: 60px;
+    margin-bottom: 15px;
+  }
+  h3 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 8px;
+  }
+  .button {
+    background: white;
+    padding: 18px 20px;
+    font-size: 20px;
+    color: #2bde73;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    float: left;
+    @include border-radius(3px);
+    @include respond-to(medium-screens) {
+      display: block;
+    }
+    @include respond-to(handhelds) {
+      display: block;
+    }
+  }
+  h1, h3, .button {
+    @include respond-to(handhelds) {
+      text-align: center;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include respond-to(medium-screens) {
+      text-align: center;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .ks-embed {
+    float: left;
+     width:30%;
+     margin-right: 5%;
+     @include respond-to(handhelds) {
+      width: 100%;
+      margin: 0 auto;
+      float: none;
+     }
+     @include respond-to(medium-screens) {
+      width: 100%;
+      margin: 0 auto;
+      float: none;
+     }
+  }
 }

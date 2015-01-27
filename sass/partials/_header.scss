@@ -14,24 +14,32 @@ header {
     background: transparentize(white,0.1);
     border: 40px solid #fff;
     max-width: 800px;
-    @include respond-to(medium-and-above) {
-      width: 50vw;
-      height: 50vw;
+
+    @include respond-to(wide-screens) {
+      width: 60%;
+      padding-bottom: 60%;
       @include center;
     }
     @include respond-to(medium-screens) {
       width: 80%;
       padding-bottom: 80%;
       height: 0;
+      @include center;
     }
     @include respond-to(handhelds) {
       padding: 30px 5%;
       border: 20px solid white;
     }
+    @include respond-to(extra-wide-screens) {
+      width: 35%;
+      padding-bottom: 33%;
+      @include center;
+    }
   }
   .content-wrap {
     @include respond-to(medium-and-above) {
       @include center;
+      width: 80%;
     }
     color: black;
   }
